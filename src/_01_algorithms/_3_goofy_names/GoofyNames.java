@@ -4,15 +4,30 @@ package _01_algorithms._3_goofy_names;
  *    Level 0
  */
 
-import javax.swing.JOptionPane;
+import java.util.Scanner;
 
 public class GoofyNames {
 	public static void main(String[] args) {
 		String goofyName = "";
+		Scanner scanner = new Scanner(System.in);
 
 		// 1. Ask the user to enter their name
-
-		// 2. Print upper case name to the console using .toUpperCase()
+		System.out.println("enter your name");
+		String name = scanner.nextLine();
+		System.out.println("Uppercase name:" + name.toUpperCase());
+		for (int i = 0; i < name.length(); i++) {
+			char currentChar = name.charAt(i);
+			if (i % 2 == 0) {
+				currentChar = Character.toUpperCase(currentChar);
+			}
+			else {
+				currentChar = Character.toLowerCase(currentChar);
+			}
+			goofyName += currentChar;
+		}
+		System.out.println("ur goofy name is:"+goofyName);
+ 
+		// 2. Print upper case name sctothe console using .toUpperCase()
 		//    Run your program to see that this works.
 
 		// 3. Loop through each character of the name (steps 4 - 7).

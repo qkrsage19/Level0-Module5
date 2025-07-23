@@ -1,5 +1,5 @@
 package _03_method_writing._2_happy_pet;
-import javax.swing.JOptionPane;
+import java.util.Scanner;
 
 public class HappyPet {
 	
@@ -7,7 +7,16 @@ public class HappyPet {
 	// this will be used to store the happiness of your pet
 	
 	public static void main(String[] args) {
+		int happinessLevel = 0;
+		Scanner scanner = new Scanner(System.in);
 		// 2. Ask the user what kind of pet they want to buy, and store their answer in a variable
+		System.out.println("what kind of pet do you want?");
+		String pet = scanner.nextLine();
+
+		System.out.println("what do you want to do to make your pet happy: cuddle, food, water, walk, groom, clean poop");
+
+
+
 
 		// 3. REPEAT steps 4 - 7 enough times to make your pet happy!
 		
